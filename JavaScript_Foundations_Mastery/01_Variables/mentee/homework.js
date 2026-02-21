@@ -26,21 +26,36 @@
 //         to a new value and then log the entire profile card again
 //         to show the updated information.
 
+// const cardTitle = "--- PROFILE CARD ---";
+// console.log(cardTitle);
+
+// let fullName = "Cris Diaz";
+// console.log(`Name: ${fullName}`);
+
+// let profileAge = 31;
+// console.log(`Age: ${profileAge}`);
+
+// let country = "United States";
+// console.log(`Country: ${country}`);
+
+// let favoriteHobby = "Hiking";
+// favoriteHobby = "Running";
+// console.log(`Hobby: ${favoriteHobby}`);
+
+// let isStudent = false;
+// console.log(`Is student? ${false}`);
+
 const cardTitle = "--- PROFILE CARD ---";
-console.log(cardTitle);
-
 let fullName = "Cris Diaz";
-console.log(`Name: ${fullName}`);
-
 let profileAge = 31;
-console.log(`Age: ${profileAge}`);
-
 let country = "United States";
-console.log(`Country: ${country}`);
-
 let favoriteHobby = "Hiking";
 favoriteHobby = "Running";
-console.log(`Hobby: ${favoriteHobby}`);
-
 let isStudent = false;
+
+console.log(cardTitle);
+console.log(`Name: ${fullName}`);
+console.log(`Age: ${profileAge}`);
+console.log(`Country: ${country}`);
+console.log(`Hobby: ${favoriteHobby}`);
 console.log(`Is student? ${false}`);
