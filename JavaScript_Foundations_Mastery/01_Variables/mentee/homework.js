@@ -35,7 +35,7 @@ console.log(`Name: ${fullName}`);
 let profileAge = 31;
 console.log(`Age: ${profileAge}`);
 
-let country = "US";
+let country = "United States";
 console.log(`Country: ${country}`);
 
 let favoriteHobby = "Hiking";
