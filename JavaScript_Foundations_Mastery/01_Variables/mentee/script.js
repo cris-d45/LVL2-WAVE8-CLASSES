@@ -21,26 +21,25 @@
 
 let firstName = "Joel";
 let age = 29;
-let favColor = "pink";
+let favoriteColor = "Blue";
 
 console.log(firstName);
 console.log(age);
-console.log(favColor);
-
+console.log(favoriteColor);
 console.log(
-  `My name is ${firstName}, I am ${age} years old. My favourite color is ${favColor}`,
-);
+  `My name is ${firstName}, I am ${age} years old. My favorite color is ${favoriteColor}`,
+); // RECOMMENDED -  This is called a template literal. This is where you use backticks and can write a string where you can specify variables in it.
 
 console.log(
   "My name is " +
     firstName +
-    "," +
-    " I am " +
+    ", " +
+    "I am " +
     age +
     " years old. My favorite color is " +
-    favColor +
+    favoriteColor +
     ".",
-);
+); // This is called concatenating, which is joining strings and passing along variables"
 
 // ==============================================
 // TASK 2 – REASSIGNMENT WITH let
@@ -57,11 +56,18 @@ console.log(
 // STEP 9: Use console.log to print a new message:
 //         "Now, my favorite color is ___."
 
-let currentColor = "pink";
+let currentColor = "Green";
 
-console.log(`At first, my favorite color was ${currentColor}.`);
-currentColor = "green";
-console.log("Now, my favorite color is " + currentColor);
+console.log(`At first my favorite color was ${currentColor}.`);
+currentColor = "Purple";
+
+console.log(`Now, my favorite color is ${currentColor}.`);
+
+// let currentColor = "pink";
+
+// console.log(`At first, my favorite color was ${currentColor}.`);
+// currentColor = "green";
+// console.log("Now, my favorite color is " + currentColor);
 
 // let currentColor = "green";
 
@@ -82,7 +88,7 @@ console.log("Now, my favorite color is " + currentColor);
 
 let personName = "Joel";
 let personAge = 29;
-let introduction = `Hi my name is ${personName} and I am ${personAge} years old.`;
+let introduction = `Hi, my name is ${personName} and I am ${personAge} years old.`;
 console.log(introduction);
 
 // ==============================================
@@ -109,9 +115,6 @@ let mood = "happy";
 console.log(mood);
 mood = "excited";
 console.log(mood);
-let birthYear = 1995;
-console.log(birthYear);
-birthYear = 1998;
-console.log(birthYear);
 
-let score = 0;
+const birthYear = 1995;
+birthYear = 1980; //This will give you an error, you cannot reassign a const variable
