@@ -28,23 +28,43 @@
 
 let a = 10;
 let b = 20;
-console.log(a + b);
+console.log("a + b =", a + b);
 
 let c = 30;
 let d = 15;
-console.log(c - d);
+console.log("c - d =", c - d);
 
-a = 14;
-b = 10;
-console.log(a * b);
+let e = 2;
+let f = 3;
+console.log("e * f =", e * f);
 
-c = 10;
-d = 30;
-console.log(d / c);
+let g = 4;
+let h = 2;
+console.log("g / h=", g / h);
 
-c = 20;
-d = 5;
-console.log(c % d);
+let i = 20;
+let j = 5;
+console.log(i % j);
+
+// let a = 10;
+// let b = 20;
+// console.log(a + b);
+
+// let c = 30;
+// let d = 15;
+// console.log(c - d);
+
+// a = 14;
+// b = 10;
+// console.log(a * b);
+
+// c = 10;
+// d = 30;
+// console.log(d / c);
+
+// c = 20;
+// d = 5;
+// console.log(c % d);
 // ==============================================
 // TASK 2 – UPDATING A VALUE OVER TIME
 // ==============================================
@@ -69,11 +89,21 @@ let savings = 1000;
 
 savings += 200;
 
-console.log("After paycheck = ", savings);
+console.log("After paycheck =", savings);
 
 savings -= 300;
 
 console.log(savings);
+
+// let savings = 1000;
+
+// savings += 200;
+
+// console.log("After paycheck = ", savings);
+
+// savings -= 300;
+
+// console.log(savings);
 
 // ==============================================
 // TASK 3 – ORDER OF OPERATIONS
@@ -90,10 +120,15 @@ console.log(savings);
 // STEP 15: Log both resultOne and resultTwo with clear messages,
 //          and notice how the answers are different.
 
-let resultOne = 5 + 3 * 2;
-let resultTwo = (5 + 3) * 2;
+let resultOne = 5 + 3 * 2; //prioritizes multiplication first, then plus.
+let resultTwo = (5 + 3) * 2; //prioritizes the values in parenthesis
 console.log(resultOne);
 console.log(resultTwo);
+
+// let resultOne = 5 + 3 * 2;
+// let resultTwo = (5 + 3) * 2;
+// console.log(resultOne);
+// console.log(resultTwo);
 // ==============================================
 // TASK 4 – USING + WITH STRINGS
 // ==============================================
@@ -111,14 +146,13 @@ console.log(resultTwo);
 // STEP 19: Log totalMessage to the console.
 
 let baseTotal = 10 + 5;
-let secondbaseTotal = 15;
 console.log("Base total is: " + baseTotal);
 
 let totalMessage = `Base total is: ${baseTotal}`;
+console.log(totalMessage);
 
-console.log(baseTotal + baseTotal);
+let num = 10;
+let string = "10";
+console.log(num + string);
 
-// let num = 10;
-// let string = "10";
-
-// console.log(num + string);
+//Why do we use semicolons? It tells the code we are done with this statement.

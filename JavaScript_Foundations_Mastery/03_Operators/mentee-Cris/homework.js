@@ -39,3 +39,29 @@
 
 // STEP 11: Use console.log again to print an UPDATED summary
 //          that shows how much money is left after increasing your funBudget.
+
+let budgetTitle = "--- SIMPLE BUDGET ---";
+let monthlyIncome = 6000;
+let rentCost = 1200;
+let foodCost = 300;
+let transportCost = 90;
+let funBudget = 500;
+let totalExpenses = rentCost + foodCost + transportCost + funBudget;
+
+console.log(budgetTitle);
+console.log(`Monthly Income = ${monthlyIncome}`);
+console.log(`Rent Cost = ${rentCost}`);
+console.log(`Food Cost = ${foodCost}`);
+console.log(`Transport Cost ${transportCost}`);
+console.log(`Fun Budget = ${funBudget}`);
+console.log(`Total Expenses = ${totalExpenses}`);
+
+funBudget += 500;
+console.log("\n");
+console.log(`${budgetTitle} UPDATED`);
+console.log(`Monthly Income = ${monthlyIncome}`);
+console.log(`Rent Cost = ${rentCost}`);
+console.log(`Food Cost = ${foodCost}`);
+console.log(`Transport Cost ${transportCost}`);
+console.log(`Fun Budget = ${funBudget}`);
+console.log(`Total Expenses = ${totalExpenses}`);
