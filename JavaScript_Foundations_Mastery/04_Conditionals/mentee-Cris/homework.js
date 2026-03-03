@@ -37,3 +37,28 @@
 
 // STEP 9: Try changing the values of userAge, hasTicket, and isMember
 //         to see how the messages change in the console.
+
+let titleHeader = "--- ACCESS CHECKER ---";
+let userAge = 20;
+let hasTicket = true;
+let isMember = false;
+
+console.log(`${titleHeader}`);
+
+if (userAge >= 18) {
+  console.log("Age check passed.");
+} else {
+  console.log("Age check failed.");
+}
+
+if (hasTicket === true || isMember === true) {
+  console.log("Entry permitted based on ticket or membership.");
+} else {
+  console.log("No ticket or membership, entry denied.");
+}
+
+if ((userAge >= 18 && hasTicket === true) || isMember === true) {
+  console.log("Access granted. Enjoy the event!");
+} else {
+  console.log("Access denied. Please check age and ticket/membership.");
+}

@@ -17,7 +17,6 @@
 //         "No rain right now. You can leave the umbrella at home.".
 
 let isRaining = false;
-
 if (isRaining === true) {
   console.log("It is raining. Take an umbrella! ");
 } else {
@@ -36,12 +35,13 @@ if (isRaining === true) {
 // STEP 6: If age >= 18, log "You are an adult.".
 //         Otherwise, log "You are a minor.".
 
-let age = 10;
+let age = 77;
 if (age >= 18) {
-  console.log("You are an adult");
+  console.log(" You are an adult. ");
 } else {
-  console.log("You are a minor");
+  console.log(" You are a minor. ");
 }
+
 // ==============================================
 // TASK 3 – SCORE TO GRADE (IF / ELSE IF / ELSE)
 // ==============================================
@@ -59,11 +59,11 @@ if (age >= 18) {
 // STEP 9: Test your code by changing score to different values and
 //         checking the console output.
 
-let score = 59;
+let score = 95;
 if (score >= 90) {
-  console.log("Grade A");
+  console.log("Grade: A");
 } else if (score >= 80) {
-  console.log("Grade B");
+  console.log("Grade: B");
 } else if (score >= 70) {
   console.log("Grade C");
 } else if (score >= 60) {
@@ -103,7 +103,7 @@ let hasTicket = true;
 let hasPopcorn = true;
 
 if (hasTicket === true && hasPopcorn === true) {
-  console.log("Ready for the Movie. Ticket and popcorn are set");
+  console.log("Ready for Movie. Ticket and popcorn are set");
 } else {
   console.log("Something is missing, check ticket or popcorn");
 }

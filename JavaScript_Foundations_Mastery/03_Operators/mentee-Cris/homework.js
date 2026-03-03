@@ -56,6 +56,7 @@ console.log(`Transport Cost ${transportCost}`);
 console.log(`Fun Budget = ${funBudget}`);
 console.log(`Total Expenses = ${totalExpenses}`);
 
+// Fun Budget increased
 funBudget += 500;
 console.log("\n");
 console.log(`${budgetTitle} UPDATED`);
