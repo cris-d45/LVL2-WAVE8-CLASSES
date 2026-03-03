@@ -39,7 +39,7 @@
 //         to see how the messages change in the console.
 
 let titleHeader = "--- ACCESS CHECKER ---";
-let userAge = 20;
+let userAge = 25;
 let hasTicket = true;
 let isMember = false;
 
@@ -57,7 +57,7 @@ if (hasTicket === true || isMember === true) {
   console.log("No ticket or membership, entry denied.");
 }
 
-if ((userAge >= 18 && hasTicket === true) || isMember === true) {
+if (userAge >= 18 && (hasTicket === true || isMember === true)) {
   console.log("Access granted. Enjoy the event!");
 } else {
   console.log("Access denied. Please check age and ticket/membership.");
