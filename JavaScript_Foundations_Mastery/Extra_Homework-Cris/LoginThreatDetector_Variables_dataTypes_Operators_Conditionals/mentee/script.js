@@ -16,6 +16,17 @@
 // - location output              → id="locationOut"
 // - device output                → id="deviceOut"
 
+const failedAttempts = document.getElementById("failedAttempts");
+const unusualLocation = document.getElementById("unusualLocation");
+const recognizedDevice = document.getElementById("recognizedDevice");
+const scanBtn = document.getElementById("scanBtn");
+const message = document.getElementById("message");
+const statusText = document.getElementById("statusText");
+const statusDetails = document.getElementById("statusDetails");
+const attemptsOut = document.getElementById("attemptsOut");
+const locationOut = document.getElementById("locationOut");
+const deviceOut = document.getElementById("deviceOut");
+
 // Step 2: Add a click event listener to the Scan button
 // When clicked, run your security decision logic
 
@@ -27,6 +38,15 @@
 //    unusual = true if unusualLocation === "yes"
 // Convert recognizedDevice into a BOOLEAN:
 //    recognized = true if recognizedDevice === "yes"
+
+// scanBtn.addEventListener("click", function () {
+//   const failedAttemptsInputValue = Number(failedAttempts.value);
+//   const unusualLocationValue = unusualLocation.value;
+//   const recognizedDeviceValue = recognizedDevice.value;
+
+//   const unusual = unusualLocationValue === "yes";
+//   const recognized = recognizedDeviceValue === "yes";
+// });
 
 // Step 4: Validation using conditionals
 // If failedAttempts is empty OR failedAttempts < 0:
@@ -61,6 +81,70 @@
 // Also update color by adding ONE class to statusText:
 // - safe (green), warn (yellow), danger (red)
 // TIP: Remove the other classes first so colors don’t stack.
+
+scanBtn.addEventListener("click", function () {
+  const failedAttemptsValue = Number(failedAttempts.value);
+  const unusualLocationValue = unusualLocation.value;
+  const recognizedDeviceValue = recognizedDevice.value;
+
+  const unusual = unusualLocationValue === "yes";
+  const recognized = recognizedDeviceValue === "yes";
+
+  if (!failedAttempts.value || failedAttempts.value <= 0) {
+    message.textContent = "Please enter a valid number, or failed attempts";
+    message.className = "message danger";
+    return;
+  }
+
+  attemptsOut.textContent = String(failedAttemptsValue);
+  locationOut.textContent = unusual ? "Yes" : "No";
+  deviceOut.textContent = recognized ? "Yes" : "No";
+
+  let status = "";
+  let details = "";
+
+  if (failedAttemptsValue >= 5) {
+    status = "ACCOUNT LOCKED";
+  } else if (unusual === true && recognized === false) {
+    status = "SUSPICIOUS";
+  } else if (failedAttempts >= 3 && unusual === true) {
+    status = "SUSPICIOUS";
+  } else {
+    status = "LOGIN APPROVED";
+  }
+
+  if (status === "ACCOUNT LOCKED") {
+    details = "Too many failed attempts. Please reset your password.";
+  } else if (status === "SUSPICIOUS") {
+    details = "Unusual sign-in detected. Verify identity.";
+  } else {
+    details = "No more risk indicators detected.";
+  }
+
+  statusText.textContent = status;
+  statusDetails.textContent = details;
+
+  statusText.classList.remove("safe", "warn", "danger");
+
+  if (status === "ACCOUNT LOCKED") {
+    statusText.classList.add("danger");
+  } else if (status === "SUSPICIOUS") {
+    statusText.classList.add("warn");
+  } else {
+    statusText.classList.add("safe");
+  }
+
+  if (status === "ACCOUNT LOCKED") {
+    message.textContent = "Tip: Use 'Forgot Password' to recover account.";
+    message.classList.add("message danger");
+  } else if (status === "SUSPICIOUS") {
+    message.textContent = "Tip: Turn on 2FA.";
+    message.classList.add("message warn");
+  } else {
+    message.textContent = "Tip: Keep your device recognized for faster logins.";
+    message.classList.add("message safe");
+  }
+});
 
 // Step 10: Update the message paragraph with guidance
 // Examples:
