@@ -25,9 +25,8 @@
 //         and see the new table in the console.
 
 let baseNumber = 2;
-
+console.log(`--- MULTIPLICATION TABLE FOR ${baseNumber} ---`);
 for (let i = 1; i <= 10; i++) {
   let totalAmount = baseNumber * i;
-  console.log(`--- MULTIPLICATION TABLE FOR ${baseNumber} ---`);
   console.log(`${baseNumber} X ${i} = ${totalAmount}`);
 }
