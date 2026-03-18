@@ -107,7 +107,7 @@ scanBtn.addEventListener("click", function () {
     status = "ACCOUNT LOCKED";
   } else if (unusual === true && recognized === false) {
     status = "SUSPICIOUS";
-  } else if (failedAttempts >= 3 && unusual === true) {
+  } else if (failedAttemptsValue >= 3 && unusual === true) {
     status = "SUSPICIOUS";
   } else {
     status = "LOGIN APPROVED";
@@ -136,7 +136,7 @@ scanBtn.addEventListener("click", function () {
 
   if (status === "ACCOUNT LOCKED") {
     message.textContent = "Tip: Use 'Forgot Password' to recover account.";
-    message.classList.add("message danger");
+    message.classList.add("message", "danger");
   } else if (status === "SUSPICIOUS") {
     message.textContent = "Tip: Turn on 2FA.";
     message.classList.add("message warn");
