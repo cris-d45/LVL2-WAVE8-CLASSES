@@ -46,8 +46,8 @@ let students = [
 
 console.log(students[1]);
 // console.log(students);
-// console.log(student.name);
-// console.log(student.age);
+// console.log(students.name);
+// console.log(students.age);
 
 // -------- TASK 4 — MODIFY OBJECT PROPERTIES --------
 
@@ -55,6 +55,6 @@ console.log(students[1]);
 // STEP 12: Add a new property called favoriteColor.
 // STEP 13: Log the updated object.
 
-student.age = 20;
-student.favoriteColor = "pink";
-console.log(student);
+students.age = 20;
+students.favoriteColor = "pink";
+console.log(students);

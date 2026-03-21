@@ -166,7 +166,7 @@ You will use arrays and objects when:
 ---
 
 ## 7. Mini Homework --- "Simple Contact Card"
-
+ 
 You will:
 
 1.  Create an **array** called `contacts`.
