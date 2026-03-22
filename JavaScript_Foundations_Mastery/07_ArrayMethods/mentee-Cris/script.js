@@ -83,14 +83,14 @@ mentees.forEach((mentee) => {
 //          where each item is a string like "Value: X".
 
 // STEP 14: Log labeledNumbers.
-let numbers = [2, 4, 6, 8];
-let doubleNumbers = numbers.map((number) => number * 2);
+// let numbers = [2, 4, 6, 8];
+// let doubleNumbers = numbers.map((number) => number * 2);
 
-console.log(numbers);
-console.log(doubleNumbers);
+// console.log(numbers);
+// console.log(doubleNumbers);
 
-const labeledNumbers = numbers.map((number2) => `Value: ${number2}`);
-console.log(labeledNumbers);
+// const labeledNumbers = numbers.map((number2) => `Value: ${number2}`);
+// console.log(labeledNumbers);
 
 // ==============================================
 // TASK 4 – FILTER: KEEP ONLY SOME VALUES
@@ -109,4 +109,4 @@ console.log(labeledNumbers);
 
 // STEP 19: Log evenNumbers.
 
-let mixedNumbers = [];
+// let mixedNumbers = [];

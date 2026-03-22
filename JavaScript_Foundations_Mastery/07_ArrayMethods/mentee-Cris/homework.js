@@ -30,3 +30,24 @@
 //         (task.length > 15)
 
 // STEP 8: Log longTasks to see which tasks were kept.
+
+//=========================================================================================
+
+let tasks = ["Grocery Shopping", "Workout", "Mealprep"];
+console.log("Original array", tasks);
+
+tasks.push("Read");
+console.log("After push", tasks);
+
+tasks.unshift("Taxes");
+console.log("After unshift", tasks);
+
+let removedTask = tasks.pop();
+console.log("After pop", tasks);
+
+tasks.forEach((task, i) => {
+  console.log(`${i + 1}. ${task}`);
+});
+
+let longTasks = tasks.filter((task) => task.length > 15);
+console.log(`Long Task`, { longTasks });
