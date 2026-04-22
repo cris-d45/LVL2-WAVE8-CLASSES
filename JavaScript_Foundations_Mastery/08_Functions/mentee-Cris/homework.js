@@ -17,6 +17,15 @@
 //
 // STEP 2: Test it 3 times with console.log.
 //         Use labels so it’s clear.
+
+function doubleNumber(n) {
+  return n * 2;
+}
+
+console.log(`Testing doubleNumber value 1 = ${doubleNumber(6)}`);
+console.log(`Testing doubleNumber value 2 = ${doubleNumber(8)}`);
+console.log(`Testing doubleNumber value 3 = ${doubleNumber(3)}`);
+
 //
 // ==============================================
 // TASK 2 – “GUARDRAIL” (IF / ELSE INSIDE A FUNCTION)
@@ -30,6 +39,18 @@
 //         - Else, return "Not allowed ❌"
 //
 // STEP 5: Test it with ages like 10, 13, 17.
+
+function canWatchMovie(age) {
+  if (age >= 13) {
+    return `Allowed ✅`;
+  } else {
+    return `Not Allowed ❌`;
+  }
+}
+
+console.log(`Checking age verification = ${canWatchMovie(20)}`);
+console.log(`Checking age verification = ${canWatchMovie(18)}`);
+console.log(`Checking age verification = ${canWatchMovie(12)}`);
 //
 // ==============================================
 // TASK 3 – DEFAULT PARAMETER (OPTIONAL INPUT)
@@ -46,6 +67,18 @@
 // STEP 8: Test greet() with:
 //         - greet("Maya")
 //         - greet()   (no argument)
+
+function greet(name) {
+  if (name === null) {
+    name = "friend";
+  } else {
+    console.log(`Hello, ${name}`);
+  }
+}
+
+console.log(greet("Maya"));
+console.log(greet());
+
 //
 // ==============================================
 // TASK 4 – ARROW FUNCTION PRACTICE
@@ -56,6 +89,15 @@
 //         It returns a - b
 //
 // STEP 10: console.log subtract with a few tests.
+
+const subtract = (a, b) => {
+  return a - b;
+};
+
+console.log(`Arrow function test`, subtract(20, 7));
+console.log(`Arrow function test`, subtract(30, 15));
+console.log(`Arrow function test`, subtract(40, 19));
+
 //
 // ==============================================
 // TASK 5 – CALLBACK MINI (FUNCTION AS AN ARGUMENT)
@@ -76,6 +118,19 @@
 //
 //  Hint: You can pass arrow functions like:
 // (x, y) => x + y
+
+function doMath(numberA, numberB, operation) {
+  return operation(numberA, numberB);
+}
+console.log(
+  `Callback mini test addition =`,
+  doMath(5, 7, (a, b) => a + b),
+);
+console.log(
+  `Callback mini test multiplication =`,
+  doMath(5, 7, (a, b) => a * b),
+);
+
 //
 // ==============================================
 // TASK 6 – “REAL LIFE” MINI: TAX CALCULATOR
@@ -95,3 +150,10 @@
 //          addTax(100, 16)
 //          addTax(59.99, 8)
 //
+
+function addTax(price, taxRatePercent) {
+  const finalPrice = price * (1 + taxRatePercent / 100);
+  return Number(finalPrice.toFixed(2));
+}
+console.log(addTax(100, 16));
+console.log(addTax(59.99, 8));

@@ -82,7 +82,7 @@ function addTwoNumbers(a, b) {
   return a + b;
 }
 
-const total = addTwoNumbers(3, 7);
+const total = addTwoNumbers(4, 7);
 
 console.log("total =", total);
 
@@ -126,7 +126,7 @@ sayBye();
 //          It should return x * y.
 //
 // STEP 15: Test multiply with console.log:
-//          console.log("multiply 4 * 6 =", multiply(4, 6));
+//console.log("multiply 4 * 6 =", multiply(4, 6));
 //
 // STEP 16: Create another arrow function named makeFullName.
 //          It takes two parameters: first and last.
@@ -137,18 +137,26 @@ sayBye();
 const multiply = (x, y) => {
   return x * y;
 };
+
 console.log("multiply 4 * 6 =", multiply(4, 6));
+
+// const makeFullName = (first, last) => {
+//   return `${first} ${last}`;
+// };
 
 const makeFullName = (first, last) => {
   return `${first} ${last}`;
 };
+
+// console.log(makeFullName("Riley", "Kim"));
+
 console.log(makeFullName("Riley", "Kim"));
 
 // ==============================================
 // TASK 6 – CALLBACKS (FUNCTIONS PASSED INTO FUNCTIONS)
 // ==============================================
 //
-//  A callback is a function you give to another function to run later.
+//  A callback i s a function you give to another function to run later.
 //
 // STEP 18: Create a function named runTwice that takes ONE parameter named callback.
 //          Inside runTwice:
@@ -161,18 +169,32 @@ console.log(makeFullName("Riley", "Kim"));
 // STEP 20: Call runTwice again but this time pass an arrow function that logs:
 //          "Again!"
 //
+// function runTwice(callback) {
+//   callback();
+//   callback();
+// }
+
 function runTwice(callback) {
   callback();
   callback();
 }
 
+// runTwice(function () {
+//   console.log("running!");
+// });
+
 runTwice(function () {
   console.log("running!");
 });
 
+// runTwice(() => {
+//   console.log("Again!");
+// });
+
 runTwice(() => {
   console.log("Again!");
 });
+
 // ==============================================
 // TASK 7 – MINI “REAL LIFE” EXAMPLE: FORMATTER
 // ==============================================
@@ -189,6 +211,10 @@ runTwice(() => {
 // STEP 22: Test it with console.log using 3 different numbers.
 
 //
+
+// function formatPrice(priceNumber) {
+//   return `$${priceNumber.toFixed(2)}`;
+// }
 
 function formatPrice(priceNumber) {
   return `$${priceNumber.toFixed(2)}`;
